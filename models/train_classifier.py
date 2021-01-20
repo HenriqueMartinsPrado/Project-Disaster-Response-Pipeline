@@ -75,6 +75,10 @@ def build_model():
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
+    '''
+    this function make a prediction using X_test data and store the information in Y_pred object
+    besides, print the accuracy about the prediction
+    '''
     Y_pred = model.predict(X_test)
     print(classification_report(Y_test, Y_pred, target_names = category_names))
     print('---------------------------------')
@@ -82,6 +86,9 @@ def evaluate_model(model, X_test, Y_test, category_names):
         print('%25s accuracy : %.2f' %(category_names[i], accuracy_score(Y_test[:,i], Y_pred[:,i])))
 
 def save_model(model, model_filepath):
+    '''
+    save the model on disk
+    '''
     joblib.dump(model, model_filepath)
 
 def main():
