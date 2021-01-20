@@ -55,6 +55,7 @@ def index():
     # Getting exclude data correlated
     categories = df.iloc[:,4:]
     categories_mean = categories.mean().sort_values(ascending=False)[1:11]
+    category_hists = list(df.iloc[:, 4:].sum(axis=1))
     categories_names = list(categories_mean.index)   
 
     # Creating my own visuals
@@ -92,6 +93,24 @@ def index():
                 },
                 'xaxis': {
                     'title': "Categories"
+                }
+            }
+        },
+        {
+            'data': [
+                dict(
+                    x=category_hists,
+                    type='histogram'
+                ),
+            ],
+
+            'layout': {
+                'title': 'Histogram - Category Attributes ',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Total Number of Category Attributes"
                 }
             }
         },
