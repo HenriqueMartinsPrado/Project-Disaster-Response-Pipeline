@@ -56,6 +56,6 @@ Instructions:
 3. Go to http://0.0.0.0:3001/ or http://localhost:3001/
 
 ## 4. Licensing, Authors, Acknowledgements, etc.<a name="licensing"></a>
-<ul> <li><p align="justify">Book: Hands-On Machine Learning with Scikit-Learn and TensorFlow Concepts, Tools, and Techniques to Build Intelligent Systems-O’Reilly Media</p> <li><p 
-	align="justify">https://www.kaggle.com/hassanamin/customer-churn</p>
+<ul> 
+	<li><p align="justify">Book: Hands-On Machine Learning with Scikit-Learn and TensorFlow Concepts, Tools, and Techniques to Build Intelligent Systems-O’Reilly Media</p>
 </ul>
