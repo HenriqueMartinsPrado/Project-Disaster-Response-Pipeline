@@ -76,44 +76,43 @@ def index():
                     'title': "Genre"
                 }
             }
+        },
+        {
+            'data': [
+                Bar(
+                    x=categories_names,
+                    y=categories_mean
+                )
+            ],
+
+            'layout': {
+                'title': 'Top 10 Message Categories',
+                'yaxis': {
+                    'title': "Percentage"
+                },
+                'xaxis': {
+                    'title': "Categories"
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=category,
+                    y=category_counts
+                )
+            ],
+
+            'layout': {
+                'title': 'Message Categories',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Category"
+                }
+            }
         }
-        # ,
-        # {
-        #     'data': [
-        #         Bar(
-        #             x=categories_names,
-        #             y=categories_mean
-        #         )
-        #     ],
-
-        #     'layout': {
-        #         'title': 'Top 10 Message Categories',
-        #         'yaxis': {
-        #             'title': "Percentage"
-        #         },
-        #         'xaxis': {
-        #             'title': "Categories"
-        #         }
-        #     }
-        # },
-        # {
-        #     'data': [
-        #         Bar(
-        #             x=category,
-        #             y=category_counts
-        #         )
-        #     ],
-
-        #     'layout': {
-        #         'title': 'Message Categories',
-        #         'yaxis': {
-        #             'title': "Count"
-        #         },
-        #         'xaxis': {
-        #             'title': "Category"
-        #         }
-        #     }
-        # }
     ]
     
     # Encode plotly graphs in JSON
