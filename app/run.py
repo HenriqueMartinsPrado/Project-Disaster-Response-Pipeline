@@ -2,7 +2,6 @@
 import pandas as pd
 import numpy as np
 import json
-import plotly
 
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
@@ -10,7 +9,9 @@ from nltk.tokenize import word_tokenize
 from flask import Flask
 from flask import render_template, request, jsonify
 
+import plotly
 from plotly.graph_objs import Bar
+
 #from sklearn.externals import joblib
 import joblib
 from sqlalchemy import create_engine
@@ -75,49 +76,50 @@ def index():
                     'title': "Genre"
                 }
             }
-        },
-        {
-            'data': [
-                Bar(
-                    x=categories_names,
-                    y=categories_mean
-                )
-            ],
-
-            'layout': {
-                'title': 'Top 10 Message Categories',
-                'yaxis': {
-                    'title': "Percentage"
-                },
-                'xaxis': {
-                    'title': "Categories"
-                }
-            }
-        },
-        {
-            'data': [
-                Bar(
-                    x=category,
-                    y=category_counts
-                )
-            ],
-
-            'layout': {
-                'title': 'Message Categories',
-                'yaxis': {
-                    'title': "Count"
-                },
-                'xaxis': {
-                    'title': "Category"
-                }
-            }
         }
+        # ,
+        # {
+        #     'data': [
+        #         Bar(
+        #             x=categories_names,
+        #             y=categories_mean
+        #         )
+        #     ],
+
+        #     'layout': {
+        #         'title': 'Top 10 Message Categories',
+        #         'yaxis': {
+        #             'title': "Percentage"
+        #         },
+        #         'xaxis': {
+        #             'title': "Categories"
+        #         }
+        #     }
+        # },
+        # {
+        #     'data': [
+        #         Bar(
+        #             x=category,
+        #             y=category_counts
+        #         )
+        #     ],
+
+        #     'layout': {
+        #         'title': 'Message Categories',
+        #         'yaxis': {
+        #             'title': "Count"
+        #         },
+        #         'xaxis': {
+        #             'title': "Category"
+        #         }
+        #     }
+        # }
     ]
     
     # Encode plotly graphs in JSON
     ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
     graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
-    
+        
     # Render web page with plotly graphs
     return render_template('master.html', ids=ids, graphJSON=graphJSON)
 
