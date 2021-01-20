@@ -14,7 +14,6 @@ from plotly.graph_objs import Bar
 from sklearn.externals import joblib
 from sqlalchemy import create_engine
 
-
 app = Flask(__name__)
 
 def tokenize(text):
@@ -28,15 +27,14 @@ def tokenize(text):
 
     return clean_tokens
 
-# load data
+# Load data
 engine = create_engine('sqlite:///../data/DisasterResponse.db')
 df = pd.read_sql_table('FigureEight', engine)
 
-# load model
+# Load model
 model = joblib.load("../models/classifier.pkl")
 
-
-# index webpage displays cool visuals and receives user input text for model
+# Index webpage displays cool visuals and receives user input text for model
 @app.route('/')
 @app.route('/index')
 def index():
@@ -114,21 +112,21 @@ def index():
         }
     ]
     
-    # encode plotly graphs in JSON
+    # Encode plotly graphs in JSON
     ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
     graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
     
-    # render web page with plotly graphs
+    # Render web page with plotly graphs
     return render_template('master.html', ids=ids, graphJSON=graphJSON)
 
 
-# web page that handles user query and displays model results
+# Web page that handles user query and displays model results
 @app.route('/go')
 def go():
-    # save user input in query
+    # Save user input in query
     query = request.args.get('query', '') 
 
-    # use model to predict classification for query
+    # Use model to predict classification for query
     classification_labels = model.predict([query])[0]
     classification_results = dict(zip(df.columns[4:], classification_labels))
 
