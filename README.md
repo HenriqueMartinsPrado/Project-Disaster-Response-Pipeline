@@ -9,7 +9,7 @@
 <p align="justify">The motivation for developing this project was to analyze disaster data offered by the Figure Eight data set. In this data set, real messages sent during disaster events were found. Thus, using this data set, a machine learning pipeline was created so that it was possible to send the messages to an appropriate disaster relief agency.</p>
 
 ## 2. File Descriptions<a name="files"></a>
-    .
+
     ├── app     
     │   ├── run.py                           # Flask file to execute the web app
     │   └── templates   
