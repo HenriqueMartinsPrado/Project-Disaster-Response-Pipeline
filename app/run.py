@@ -11,7 +11,8 @@ from flask import Flask
 from flask import render_template, request, jsonify
 
 from plotly.graph_objs import Bar
-from sklearn.externals import joblib
+#from sklearn.externals import joblib
+import joblib
 from sqlalchemy import create_engine
 
 # Web Development - App

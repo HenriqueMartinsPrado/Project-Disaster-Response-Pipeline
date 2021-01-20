@@ -19,7 +19,8 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import classification_report, accuracy_score
 from sklearn.svm import LinearSVC
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
-from sklearn.externals import joblib
+#from sklearn.externals import joblib
+import joblib
 
 def load_data(path_db):
     '''
