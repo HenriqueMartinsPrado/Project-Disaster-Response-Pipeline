@@ -1,7 +1,9 @@
 ## PROJECT DISASTER RESPONSE PIPELINE
 ### Table of Contents
-1. [Project Motivation](#motivation) 2. [File Descriptions](#files) 3. [How to Interact with my project / Results](#results) 4. [Licensing, 
-Authors, and Acknowledgements](#licensing)
+1. [Project Motivation](#motivation) 
+2. [File Descriptions](#files) 
+3. [How to Interact with my project / Results](#results) 
+4. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ## 1. Project Motivation<a name="motivation"></a>
 <p align="justify">The motivation for developing this project was to analyze disaster data offered by the Figure Eight data set. In this data set, real messages sent during disaster events were found. Thus, using this data set, a machine learning pipeline was created so that it was possible to send the messages to an appropriate disaster relief agency.</p>
@@ -22,26 +24,26 @@ Authors, and Acknowledgements](#licensing)
 		
 <p align="justify">Just to highlight, the following import libraries were used in the project:</p>
 
-`import pandas as pd`
-`import numpy as np`
-`import json`
-`import plotly`
+	`import pandas as pd`
+	`import numpy as np`
+	`import json`
+	`import plotly`
 
-`from nltk.stem import WordNetLemmatizer`
-`from nltk.tokenize import word_tokenize`
+	`from nltk.stem import WordNetLemmatizer`
+	`from nltk.tokenize import word_tokenize`
 
-`from flask import Flask`
-`from flask import render_template, request, jsonify`
+	`from flask import Flask`
+	`from flask import render_template, request, jsonify`
 
-`from plotly.graph_objs import Bar`
-`from sklearn.externals import joblib`
-`from sqlalchemy import create_engine`
+	`from plotly.graph_objs import Bar`
+	`from sklearn.externals import joblib`
+	`from sqlalchemy import create_engine`
 
 ## 3. How to Interact with my project / Results<a name="results"></a>
 
-# Disaster Response Pipeline Project
+### Disaster Response Pipeline Project
 
-	### Instructions:
+	#### Instructions:
 	1. Run the following commands in the project's root directory to set up your database and model.
 
 		- To run ETL pipeline that cleans data and stores in database
