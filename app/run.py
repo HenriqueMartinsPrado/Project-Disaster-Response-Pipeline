@@ -81,7 +81,7 @@ def index():
             'data': [
                 Bar(
                     x=categories_names,
-                    y=categories_mean
+                    y=categories_mean                    
                 )
             ],
 
