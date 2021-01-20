@@ -36,6 +36,10 @@ def clean_data(df):
     return df
 
 def save_data(df, database_filepath):
+    '''
+    engine: create the engine sqllite
+    save the table FigureEight in the database mentioned above
+    '''
     engine = create_engine('sqlite:///' + database_filepath)
     df.to_sql('FigureEight', engine, index=False)
 
