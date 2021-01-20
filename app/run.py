@@ -86,7 +86,7 @@ def index():
             ],
 
             'layout': {
-                'title': 'Top 10 Message Categories',
+                'title': 'Top Message Categories - Sorted from highest to lowest',
                 'yaxis': {
                     'title': "Percentage"
                 },
