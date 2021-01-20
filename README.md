@@ -2,7 +2,7 @@
 ### Table of Contents
 1. [Project Motivation](#motivation) 
 2. [File Descriptions](#files) 
-3. [How to Interact with my project / Results](#results) 
+3. [How to Interact with my project](#results) 
 4. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ## 1. Project Motivation<a name="motivation"></a>
@@ -39,7 +39,7 @@
 	from sklearn.externals import joblib
 	from sqlalchemy import create_engine
 
-## 3. How to Interact with my project / Results<a name="results"></a>
+## 3. How to Interact with my project<a name="results"></a>
 
 Instructions:
 
