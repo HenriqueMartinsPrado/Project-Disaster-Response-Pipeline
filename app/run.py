@@ -14,6 +14,7 @@ from plotly.graph_objs import Bar
 from sklearn.externals import joblib
 from sqlalchemy import create_engine
 
+# Web Development - App
 app = Flask(__name__)
 
 def tokenize(text):
@@ -119,7 +120,6 @@ def index():
     # Render web page with plotly graphs
     return render_template('master.html', ids=ids, graphJSON=graphJSON)
 
-
 # Web page that handles user query and displays model results
 @app.route('/go')
 def go():
@@ -137,10 +137,8 @@ def go():
         classification_result=classification_results
     )
 
-
 def main():
     app.run(host='0.0.0.0', port=3001, debug=True)
-
 
 if __name__ == '__main__':
     main()
